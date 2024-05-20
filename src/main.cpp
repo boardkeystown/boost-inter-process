@@ -9,7 +9,7 @@
 #include "data.hpp"
 #include "helpers.hpp"
 int main() {
-    my_message::Message message {"data_queue",sizeof(std::size_t) * 1488};
+    my_message::Message message {"data_queue",sizeof(std::size_t) * 1984};
     std::string serialized = helpers::get_serialized<my_message::Message>(message);
     std::size_t serialized_size = helpers::get_serialized_size<my_message::Message>(message);
     try { 
