@@ -44,6 +44,7 @@ struct Data {
     }
     template<class Archive>
     void serialize(Archive &ar, const unsigned int version) {
+        (void)version; // Suppress unused parameter warning
         ar & i_value;
         ar & f_value;
         ar & d_value;

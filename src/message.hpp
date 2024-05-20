@@ -15,6 +15,7 @@ struct Message {
     }
     template<class Archive>
     void serialize(Archive &ar, const unsigned int version) {
+        (void)version; // Suppress unused parameter warning
         ar & queue_name;
         ar & buffer_size;
     }

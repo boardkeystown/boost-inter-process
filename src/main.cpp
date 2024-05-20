@@ -1,6 +1,11 @@
 // main.cpp
 #include <iostream>
+// ignore the dumb boost / windows warning TODO: how do you do this for gnu?? 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wcast-function-type"
 #include <boost/process.hpp>
+#pragma GCC diagnostic pop
+
 #include <boost/interprocess/ipc/message_queue.hpp>
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
